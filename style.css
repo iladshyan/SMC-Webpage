@@ -58,7 +58,7 @@ nav::before {
     z-index: -1; /* Place the pseudo-element behind the content */
     background-image: url('Bg.jpg');
     background-size: cover;
-    background-position: center center;
+    background-position: bottom center;
     background-repeat: no-repeat;
     filter: blur(3px) brightness(60%);
     height: 110%;
@@ -74,4 +74,17 @@ nav > .logo {
 nav > ul > li > a {
     text-decoration: none;
     color: inherit;
+}
+
+nav > h1 {
+    color: white;
+    margin: 0;
+    font-size: xx-large;
+    margin-bottom: .5em;
+}
+nav > h2 {
+    color: white;
+    margin: 0;
+    margin-bottom: 1em;
+    font-size: medium;
 }
