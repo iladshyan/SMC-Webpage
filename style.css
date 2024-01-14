@@ -1,0 +1,77 @@
+body {
+    margin: 0;
+    align-items: center;
+    text-align: center;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+nav > ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+}
+
+
+nav > ul > li {
+    display: inline-block; /* Set to 'inline' for strict horizontal alignment */
+    vertical-align: middle; /* Ensures proper alignment if text wraps to a new line */      
+    text-align: right; /* Aligns text to the right */
+    margin-left: auto; /* Pushes items to the right */
+    font-size: larger;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    background-color: rgba(255, 255, 255, 0.205);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.329);
+    color: white;
+    margin-bottom: .25em;
+
+}
+nav > ul > li:hover{
+    background-color: rgb(101, 91, 255);
+    border-radius: 0.5em;
+    color: rgb(255, 255, 255);
+    border: 1px solid rgba(255, 255, 255, 0.014);
+}
+
+nav {
+    display: inline-block;
+    text-align: center;
+    align-items: center;
+    width: 100vw;
+    background-size: cover; /* Cover the entire viewport */
+    background-position: bottom; /* Align the bottom of the image to the bottom of the viewport */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    padding-bottom: 2em;
+    position: relative;
+    overflow: hidden;
+    
+}
+nav::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 120%;
+    z-index: -1; /* Place the pseudo-element behind the content */
+    background-image: url('Bg.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    filter: blur(3px) brightness(60%);
+    height: 110%;
+  }
+
+nav > .logo {
+    width: 5em;
+    margin-bottom: 1em;
+    margin: 1em;
+    border-radius: 1em;
+}
+
+nav > ul > li > a {
+    text-decoration: none;
+    color: inherit;
+}
