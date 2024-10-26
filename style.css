@@ -4,7 +4,7 @@ body {
     text-align: center;
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     transition: all 0.3s ease;
-    background-color: #1a1a1a;
+    background-color: #13131d;
     color: white;
 }
 
@@ -12,12 +12,13 @@ nav > ul {
     list-style: none;
     padding: 0;
     margin: 1em;
-    text-align: right;
+    /* text-align: right; */
 
 }
 
 
-nav > ul > li {
+
+nav > ul > li , .search {
     display: inline-block; /* Set to 'inline' for strict horizontal alignment */
     vertical-align: middle; /* Ensures proper alignment if text wraps to a new line */      
     text-align: right; /* Aligns text to the right */
@@ -25,13 +26,16 @@ nav > ul > li {
     font-size: larger;
     padding: 0.5em;
     border-radius: 0.5em;
-    background-color: rgba(255, 255, 255, 0.205);
+    background-color: rgba(255, 255, 255, 0.096);
     backdrop-filter: blur(10px);
-    
+    border: none;
     color: white;
     margin-bottom: .25em;
     transition: all 0.3s ease;
+}
 
+.search {
+    padding: .6em;
 }
 nav > ul > li:hover{
     background: rgb(6,0,119);
@@ -65,7 +69,7 @@ nav::before {
     background-size: cover;
     background-position: bottom center;
     background-repeat: no-repeat;
-    filter: blur(5px) brightness(40%);
+    filter: blur(5px) brightness(13%);
     height: 110%;
   }
 
@@ -75,6 +79,7 @@ nav::before {
     margin-bottom: 1em;
     margin: 1em;
     border-radius: 1em;
+    margin-right: 2em;
 }
 
 nav > ul > li > a {
@@ -107,17 +112,13 @@ nav > ul > li > a {
     transition: all 0.3s ease;
 }
 
-@media (max-width: 768px) {
-    .hero {
-        transition: all 0.3s ease;
-        flex-direction: column;
-    }
-  }
+
 
 .cont1{
     padding: 4em;
-    border: 2px solid white;
-    margin: 5em;
+    border: 2px solid #550a0a;
+    border-radius: 1em;
+    margin: 8em;
 }
 
 .sep {
@@ -127,3 +128,96 @@ nav > ul > li > a {
     background: linear-gradient(13deg, rgb(14, 7, 146) 0%, rgba(255,38,38,1) 100%);
     border-radius: 30px;
 }
+
+.navbar {
+    position: sticky;
+}
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #757575 #1f1f1f;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #1f1f1f;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #757575;
+    border-radius: 46px;
+    border: 3px solid #ffffff;
+  }
+
+.cont2 {
+    background-color: #070524;
+    padding: 2em;
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+.card {
+    border-radius: 1em;
+    margin: 0;
+    overflow: hidden;
+    border: #550a0a solid 3px;
+}
+
+.card > h2 {
+    background-color: #550a0a;
+    padding: 1em;
+    margin: 0;
+}
+
+.card > p {
+    /* color: black;
+    background-color: white; */
+    margin: 0;
+    padding: 1em;
+}
+
+  @media (max-width: 768px) {
+    .hero {
+        transition: all 0.3s ease;
+        flex-direction: column;
+        padding: 0em 2em;
+        padding-top: 2em;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .cont1{
+        padding: 1em;
+        margin: 2em;
+        margin-top: 5em;
+    }
+    .sep{
+        margin: 1em;
+    }
+    .logo{
+        margin: 1em;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .cont1{
+        margin: 0 30em;
+        margin-top: 5em;
+    }
+  }
