@@ -1,6 +1,10 @@
 a {
     color: white;
 }
+html{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
 
 body {
     margin: 0;
@@ -8,9 +12,10 @@ body {
     text-align: center;
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     transition: all 0.3s ease;
-    background-color: #13131d;
+    background-color: #090924;
     color: white;
-    /* overflow: hidden; */
+    width: 100vw;
+    overflow: hidden;
 }
 
 nav > ul {
@@ -52,6 +57,11 @@ nav > ul > li:hover{
 
 nav {
     display: inline-block;
+    /* justify-content: center; */
+    flex-direction: column;
+    /* height: 100vh; */
+    
+    padding-top: 2em;
     text-align: center;
     align-items: center;
     width: 100vw;
@@ -74,7 +84,7 @@ nav::before {
     background-size: cover;
     background-position: bottom center;
     background-repeat: no-repeat;
-    filter: blur(5px) brightness(13%);
+    filter: blur(20px) brightness(20%);
     height: 110%;
   }
 
@@ -115,15 +125,18 @@ nav > ul > li > a {
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
+    padding: 15em 0;
+    flex-direction: column;
 }
 
 
 
 .cont1{
     padding: 4em;
-    border: 2px solid #e0b53c;
+    /* border: 2px solid #e0b53c; */
     border-radius: 1em;
-    margin: 8em;
+    margin: 7em 15em;
+    /* background-color: #ffffff; */
 }
 
 .sep {
@@ -161,8 +174,11 @@ nav > ul > li > a {
   }
 
 .cont2 {
-    background-color: #0b0931;
-    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    background-color: #10093a;
+    padding: 15em 2em ;
+    justify-content: center;
 }
 
 .cards {
@@ -176,11 +192,11 @@ nav > ul > li > a {
     border-radius: 1em;
     margin: 0;
     overflow: hidden;
-    border: #ff6565 solid 2px;
+    border: #1e2e52 solid 2px;
 }
 
 .card > h2 {
-    background-color: #2f2daa;
+    background-color: #1e2e52;
     padding: 1em;
     margin: 0;
 }
@@ -205,7 +221,7 @@ nav > ul > li > a {
     background-position: bottom; /* Align the bottom of the image to the bottom of the viewport */
     background-repeat: no-repeat; /* Prevent the image from repeating */
     padding-bottom: 2em;
-    padding: 10em 0;
+    padding: 15em 0;
     position: relative;
     width: 100vw;
     
@@ -221,7 +237,7 @@ nav > ul > li > a {
     background-size: cover;
     background-position: bottom center;
     background-repeat: no-repeat;
-    filter: blur(5px) brightness(40%);
+    filter: blur(5px) brightness(20%);
     height: 110%;
   }
 
@@ -257,6 +273,9 @@ nav > ul > li > a {
         margin: 2em;
         margin-top: 5em;
     }
+    .cont2{
+        padding: 2em;
+    }
     .sep{
         margin: 1em;
     }
@@ -267,7 +286,10 @@ nav > ul > li > a {
 
   @media (min-width: 1024px) {
     .cont1{
-        margin: 0 30em;
+        margin: 5em 30em;
         margin-top: 5em;
+    }
+    .cont2 {
+        padding: 0 20em;
     }
   }
