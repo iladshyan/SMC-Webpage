@@ -1,3 +1,5 @@
+/* Global Styling */
+
 a {
     color: white;
 }
@@ -19,19 +21,29 @@ body {
     overflow: hidden;
 }
 
+.sep {
+    margin: 0 3em;
+    height: 3px;
+    background: rgb(6,0,119);
+    background: linear-gradient(13deg, #3734df 0%, #b31515 100%);
+    border-radius: 30px;
+}
+
+
+
+/* Hero Section and Navbar Styling */
+
 nav > ul {
     list-style: none;
     padding: 0;
     margin: 1em;
-    /* text-align: right; */
-
 }
 
 nav > ul > li , .search {
-    display: inline-block; /* Set to 'inline' for strict horizontal alignment */
-    vertical-align: middle; /* Ensures proper alignment if text wraps to a new line */      
-    text-align: right; /* Aligns text to the right */
-    margin-left: auto; /* Pushes items to the right */
+    display: inline-block;
+    vertical-align: middle;    
+    text-align: right;
+    margin-left: auto;
     font-size: larger;
     padding: 0.5em;
     border-radius: 0.5em;
@@ -57,21 +69,16 @@ nav > ul > li:hover {
 
 nav {
     display: inline-block;
-    /* justify-content: center; */
     flex-direction: column;
-    /* height: 100vh; */
-    
     padding-top: 2em;
     text-align: center;
     align-items: center;
     width: 100vw;
-    background-size: cover; /* Cover the entire viewport */
-    background-position: bottom; /* Align the bottom of the image to the bottom of the viewport */
-    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
     padding-bottom: 2em;
     position: relative;
-    /* overflow: hidden; */
-    
 }
 
 nav::before {
@@ -80,19 +87,18 @@ nav::before {
     top: -20px;
     left: -20px;
     width: 120%;
-    z-index: -1; /* Place the pseudo-element behind the content */
+    z-index: -1;
     background-image: url('Bg.jpg');
     background-size: cover;
     background-position: bottom center;
     background-repeat: no-repeat;
     filter: blur(20px) brightness(20%);
     height: 110%;
-  }
+}
 
 .logo {
     width: 5em;
     height: 5em;
-    margin-bottom: 1em;
     margin: 1em;
     border-radius: 1em;
     margin-right: 2em;
@@ -124,65 +130,24 @@ nav > ul > li > a {
     align-self: center;
     justify-self: center;
     display: flex;
-    align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
-    padding: 15em 0;
+    padding: 10em 0;
     flex-direction: column;
 }
 
-.cont1 {
+
+
+/* Background Info (background-info) Styling */
+
+.background-info {
     padding: 4em;
-    /* border: 2px solid #e0b53c; */
     border-radius: 1em;
     margin: 7em 15em;
-    /* background-color: #ffffff; */
 }
 
-.cont3 {
-    padding: 4em;
-    margin-left: 3em;
-    /* border: 2px solid #e0b53c; */
-    border-radius: 1em;
-    /* background-color: #ffffff; */
-}
-
-
-.sep {
-    margin: 0 3em;
-    height: 3px;
-    background: rgb(6,0,119);
-    background: linear-gradient(13deg, #3734df 0%, #b31515 100%);
-    border-radius: 30px;
-}
-
-.navbar {
-    position: sticky;
-}
-
-/* ===== Scrollbar CSS ===== */
-  /* Firefox */
-  * {
-    scrollbar-width: thin;
-    scrollbar-color: #757575 #1f1f1f;
-  }
-
-  /* Chrome, Edge, and Safari */
-  *::-webkit-scrollbar {
-    width: 16px;
-  }
-
-  *::-webkit-scrollbar-track {
-    background: #1f1f1f;
-  }
-
-  *::-webkit-scrollbar-thumb {
-    background-color: #757575;
-    border-radius: 46px;
-    border: 3px solid #ffffff;
-  }
-
-.cont2 {
+/* Updates (updates) Styling */
+.updates {
     display: flex;
     flex-direction: column;
     background-color: #10093a;
@@ -211,29 +176,27 @@ nav > ul > li > a {
 }
 
 .card > p {
-    /* color: black;
-    background-color: white; */
     margin: 0;
     padding: 1em;
 }
 
-.moreUpdates > a {
+.more-updates > a {
     color: white;
-
 }
+
+/* Gallery Styling */
 
 .gallery {
     display: inline-block;
     text-align: center;
     align-items: center;
-    background-size: cover; /* Cover the entire viewport */
-    background-position: bottom; /* Align the bottom of the image to the bottom of the viewport */
-    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
     padding-bottom: 2em;
     padding: 15em 0;
     position: relative;
     width: 100vw;
-    
 }
 
 .gallery::before {
@@ -242,14 +205,14 @@ nav > ul > li > a {
     top: -20px;
     left: -20px;
     width: 120%;
-    z-index: -1; /* Place the pseudo-element behind the content */
+    z-index: -1;
     background-image: url('Gallery\ bg.jpg');
     background-size: cover;
     background-position: bottom center;
     background-repeat: no-repeat;
     filter: blur(5px) brightness(20%);
     height: 110%;
-  }
+}
 
 .gallery > a {
     padding: .75em;
@@ -258,23 +221,38 @@ nav > ul > li > a {
     text-decoration: none;
     margin-top: 1em; 
 }
+
 .gallery > h1 {
     margin-bottom: 1em;
 }
 
-.cont3-wrapper{
+
+
+/* Accdemics and Sports Styling */
+
+.about-info-content{
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 7em 10em;
 }
 
-.cont3-wrapper > img {
+.about-info-content > img {
     width: 15em;
     height: 25em;
     object-fit: cover;
     border-radius: 1em;
 }
+
+.cont3 {
+    padding: 4em;
+    margin-left: 3em;
+    border-radius: 1em;
+}
+
+
+
+/* Footer Styling */
 
 .socials , .footer-links{
     align-items: center;
@@ -294,33 +272,61 @@ nav > ul > li > a {
     font-size: 2em;
 }
 
-.cont4 > .logo {
+.footer > .logo {
     margin: 1em;
     width: 10em;
     height: auto;
     object-fit: cover;
 }
 
-.cont4{
+.footer{
     background-color: #000000;
     padding: 5em;
 }
 
 
 
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #757575 #1f1f1f;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #1f1f1f;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #757575;
+    border-radius: 46px;
+    border: 3px solid #ffffff;
+}
+
+
+
+/* Adding Responsiveness For Large Screens */
+
 @media (min-width: 1300px) {
-    .cont1 {
+    .background-info {
         margin: 5em 30em;
         margin-top: 5em;
     }
+
     .cont3 {
         margin: 0em 5em;
-        /* margin-top: 5em; */
     }
-    .cont3-wrapper{
+
+    .about-info-content {
         margin: 10em 20em;
     }
-    .cont2 {
+
+    .updates {
         padding: 5em 20em;
     }
 
@@ -336,17 +342,21 @@ nav > ul > li > a {
     .hero-title {
         font-size: 3em;
     }
+
     .hero-subtitle {
         font-size: 2em;
     }
-    .cont3-wrapper > img{
+
+    .about-info-content > img {
         height: 25em;
         width: 25em;
 
     }
-  }
+}
 
-  @media (max-width: 900px) {
+/* Adding Responsiveness For Small Screens */
+
+@media (max-width: 900px) {
     .hero {
         transition: all 0.3s ease;
         flex-direction: column;
@@ -361,33 +371,38 @@ nav > ul > li > a {
         display: none;
     }
 
-    .cont1 {
+    .background-info {
         padding: 1em;
         margin: 2em;
         margin-top: 5em;
     }
+
     .cont3 {
         margin: 1em;
         margin-top: 1em;
         padding: 1em;
     }
-    .cont2 {
+
+    .updates {
         padding: 2em;
     }
+
     .sep {
         margin: 1em;
     }
+
     .logo {
         margin: 1em;
     }
-    .cont3-wrapper{
+
+    .about-info-content{
         flex-direction: column;
         margin: 1em;
         margin-top: 5em;
     }
 
-    .cont3-wrapper > img {
+    .about-info-content > img {
         height: 20em;
         width: 20em;
     }
-  }
+}
